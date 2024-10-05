@@ -45,8 +45,8 @@ function Projects() {
               imgPath={bulletproofinbox}
               isBlog={false}
               title="Bulletproof Inbox"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              // ghLink="https://github.com/soumyajit4419/Editor.io"
+              description="Bulletproof turns your open-access inbox into a permission-based one.
+‍Stop emails from unknown senders before they arrive in your inbox. It works with Gmail and Outlook."
               demoLink="https://www.bulletproofinbox.com/"
             />
           </Col>
