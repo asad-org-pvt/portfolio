@@ -17,8 +17,8 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Certificates from "./components/Certificates/Certificates";
-import Services from "./components/Services/Services";
-import ContactUs from "./components/Contact/ContactUs";
+import Services from "./components/Services";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   const [load, upadateLoad] = useState(true);
