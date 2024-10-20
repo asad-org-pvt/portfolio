@@ -17,6 +17,8 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Certificates from "./components/Certificates/Certificates";
+import Services from "./components/Services/Services";
+import ContactUs from "./components/Contact/ContactUs";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -41,6 +43,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<ContactUs />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
