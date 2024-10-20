@@ -79,6 +79,18 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/services"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Services
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/certificates"
                 onClick={() => updateExpanded(false)}
               >
@@ -95,6 +107,15 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Contact Us
               </Nav.Link>
             </Nav.Item>
 
