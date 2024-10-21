@@ -12,7 +12,6 @@ import {
   DiHtml5,
   DiCss3,
   DiMysql,
-  DiAws,
 } from "react-icons/di";
 import { SiAmazonaws, SiExpress } from "react-icons/si";
 import { SiFirebase, SiNextdotjs } from "react-icons/si";
