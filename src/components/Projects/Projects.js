@@ -5,6 +5,9 @@ import Particle from "../Particle";
 import klaims from "../../Assets/Projects/klaims.png";
 import confidant from "../../Assets/Projects/confidant.png";
 import bulletproofinbox from "../../Assets/Projects/bulletproofinbox.png";
+import manifestnotify from "../../Assets/Projects/manifestnotify.png";
+import makman from "../../Assets/Projects/makman.png";
+import wellsnsiesmic from "../../Assets/Projects/wellsnsiesmic.png";
 
 function Projects() {
   return (
@@ -51,39 +54,43 @@ function Projects() {
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={manifestnotify}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Manifest Notify"
+              description="MX Notify is a powerful, customizable tool that updates clinicians and 
+              other care providers moments after their patients are seen in the emergency department
+              or are discharged from a hospital"
+              // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://www.manifestmedex.org/solutions/mx-notify/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={wellsnsiesmic}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Wells and Siesmic"
+              description="Wells and Siesmic is an online data management and reporting tool
+              for wells, siesmic and related data from Oman, Turkey and more. Data can also be 
+              exported and shared in many standards and formates."
+              // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://was.dev.omanbidround.com"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={makman}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here
+              title="Makman"
+              description="Makman is an online open data market place, where you can access
+              free data of wells and siesmic from Oman, Turkey and more. Data can also be purchased from there."
+              // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://makman.makmandev.omanbidround.com/"
             />
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </Container>
