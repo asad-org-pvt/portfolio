@@ -88,6 +88,7 @@ function Projects() {
               description="Makman is an online open data market place, where you can access
               free data of wells and siesmic from Oman, Turkey and more. Data can also be purchased from there."
               // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://makman.om/"
             />
           </Col>
         </Row>
