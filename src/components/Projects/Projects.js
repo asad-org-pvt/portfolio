@@ -51,7 +51,7 @@ function Projects() {
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
@@ -66,10 +66,12 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Wells and Siesmic"
+              description="Wells and Siesmic is an online data management and reporting tool
+              for wells, siesmic and related data from Oman, Turkey and more. Data can also be 
+              exported and shared in many standards and formates."
+              // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://was.demo.omanbidround.com"
             />
           </Col>
 
@@ -77,13 +79,13 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here
+              title="Makman"
+              description="Makman is an online open data market place, where you can access
+              free data of wells and siesmic from Oman, Turkey and more. Data can also be purchased from there."
+              // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://makman.om/"
             />
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </Container>
