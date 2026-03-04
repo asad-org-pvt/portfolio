@@ -76,7 +76,7 @@ function Projects() {
               for wells, siesmic and related data from Oman, Turkey and more. Data can also be 
               exported and shared in many standards and formates."
               // ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://was.dev.omanbidround.com"
+              demoLink="https://was.demo.omanbidround.com"
             />
           </Col>
 
@@ -88,7 +88,6 @@ function Projects() {
               description="Makman is an online open data market place, where you can access
               free data of wells and siesmic from Oman, Turkey and more. Data can also be purchased from there."
               // ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://makman.makmandev.omanbidround.com/"
             />
           </Col>
         </Row>
