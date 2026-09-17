@@ -11,7 +11,28 @@ import {
   SiAndroidstudio,
 } from "react-icons/si";
 
-function Toolstack() {
+import { renderIcon } from "../../services/iconResolver";
+
+function Toolstack({ skills }) {
+  if (skills && skills.length > 0) {
+    return (
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        {skills.map((tool) => (
+          <Col
+            key={tool.id || tool.name}
+            xs={4}
+            md={2}
+            className="tech-icons"
+            title={tool.name}
+          >
+            {renderIcon(tool.icon_name)}
+          </Col>
+        ))}
+      </Row>
+    );
+  }
+
+  // Fallback to existing static icons
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">

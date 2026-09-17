@@ -13,10 +13,33 @@ import {
   DiCss3,
   DiMysql,
 } from "react-icons/di";
-import { SiAmazonaws, SiExpress } from "react-icons/si";
-import { SiFirebase, SiNextdotjs } from "react-icons/si";
+import {
+  SiAmazonaws,
+  SiExpress,
+  SiFirebase,
+  SiNextdotjs,
+} from "react-icons/si";
+import { renderIcon } from "../services/iconResolver";
 
-function TechstackInService() {
+function TechstackInService({ skills }) {
+  if (skills && skills.length > 0) {
+    return (
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        {skills.map((skill) => (
+          <Col
+            key={skill.id || skill.name}
+            xs={4}
+            md={2}
+            className="tech-icons"
+            title={skill.name}
+          >
+            {renderIcon(skill.icon_name)}
+          </Col>
+        ))}
+      </Row>
+    );
+  }
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">

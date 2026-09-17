@@ -11,6 +11,7 @@ import {
   Route,
   Routes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -19,9 +20,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Certificates from "./components/Certificates/Certificates";
 import Services from "./components/Services";
 import ContactUs from "./components/ContactUs";
+import AdminApp from "./admin/AdminApp";
 
-function App() {
+function AppContent() {
   const [load, upadateLoad] = useState(true);
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,10 +36,10 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
+    <>
+      {!isAdminRoute && <Preloader load={load} />}
+      <div className="App" id={!isAdminRoute && load ? "no-scroll" : "scroll"}>
+        {!isAdminRoute && <Navbar />}
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -46,12 +50,24 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<ContactUs />} />
 
+          {/* Protected Portfolio Administration Routes */}
+          <Route path="/admin/*" element={<AdminApp />} />
+
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
+        {!isAdminRoute && <Footer />}
       </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
 
 export default App;
+

@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { renderIcon } from "../../services/iconResolver";
 import {
   DiJavascript1,
   DiReact,
@@ -15,7 +16,26 @@ import {
 } from "react-icons/di";
 import { SiFirebase, SiNextdotjs } from "react-icons/si";
 
-function Techstack() {
+function Techstack({ skills }) {
+  if (skills && skills.length > 0) {
+    return (
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        {skills.map((skill) => (
+          <Col
+            key={skill.id || skill.name}
+            xs={4}
+            md={2}
+            className="tech-icons"
+            title={skill.name}
+          >
+            {renderIcon(skill.icon_name)}
+          </Col>
+        ))}
+      </Row>
+    );
+  }
+
+  // Fallback to existing static icons
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
@@ -62,3 +82,4 @@ function Techstack() {
 }
 
 export default Techstack;
+

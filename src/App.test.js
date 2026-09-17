@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders portfolio navigation and hero section', async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const homeNav = screen.getByText(/Home/i);
+  expect(homeNav).toBeInTheDocument();
+
+  const projectsNav = screen.getByText(/Projects/i);
+  expect(projectsNav).toBeInTheDocument();
+
+  const aboutNav = screen.getByText(/About/i);
+  expect(aboutNav).toBeInTheDocument();
 });
+

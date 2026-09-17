@@ -4,8 +4,23 @@ import Particle from "./Particle";
 import contactImage from "../Assets/contact.png";
 import { FaLinkedinIn, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import { useContact } from "../hooks/useContact";
+import { useProfile } from "../hooks/useProfile";
+import { useSeo } from "../hooks/useSeo";
 
 function ContactUs() {
+  const { contact } = useContact();
+  const { profile } = useProfile();
+
+  useSeo("/contact");
+
+  const email = contact?.email || profile?.email || "notasadsarwar@gmail.com";
+  const phone = contact?.phone || profile?.phone || "+92-313-6100930";
+  const phoneDigits = phone.replace(/[^0-9+]/g, "");
+  const linkedinUrl = profile?.linkedin_url || "https://www.linkedin.com/in/itsasadsarwar/";
+  const fullName = profile?.full_name || "Asad Sarwar";
+  const heroImage = profile?.contact_image_url || contactImage;
+
   return (
     <Container fluid className="about-section">
       <Container>
@@ -32,31 +47,31 @@ function ContactUs() {
                     <AiOutlineMail />{" "}
                     <a
                       style={{ textDecoration: "none" }}
-                      href="mailto:notasadsarwar@gmail.com"
+                      href={`mailto:${email}`}
                     >
                       <strong className="purple">
-                        notasadsarwar@gmail.com{" "}
+                        {email}{" "}
                       </strong>
                     </a>
                     <br />
                     <FaPhone />{" "}
                     <a
                       style={{ textDecoration: "none" }}
-                      href="tel:+923136100930"
+                      href={`tel:${phoneDigits}`}
                     >
                       <strong className="purple">
-                        +92-313-6100930 (on <FaWhatsapp /> as well){" "}
+                        {phone} (on <FaWhatsapp /> as well){" "}
                       </strong>
                     </a>
                     <br />
                     <FaLinkedinIn />{" "}
                     <a
                       style={{ textDecoration: "none" }}
-                      href="https://www.linkedin.com/in/itsasadsarwar/"
+                      href={linkedinUrl}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <strong className="purple">Asad Sarwar</strong>
+                      <strong className="purple">{fullName}</strong>
                     </a>{" "}
                   </p>
                 </blockquote>
@@ -68,7 +83,7 @@ function ContactUs() {
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={contactImage} alt="about" className="img-fluid" />
+            <img src={heroImage} alt="about" className="img-fluid" />
           </Col>
         </Row>
       </Container>

@@ -28,11 +28,11 @@ function ServicesCards(props) {
 
         <Button
           variant="primary"
-          href="/contact"
+          href={props.ctaLink || "/contact"}
           style={{ marginLeft: "10px" }}
         >
           <BsLink /> &nbsp;
-          {"Contact Us"}
+          {props.ctaLabel || "Contact Us"}
         </Button>
       </Card.Body>
     </Card>
